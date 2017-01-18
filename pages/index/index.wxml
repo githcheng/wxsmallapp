@@ -20,6 +20,34 @@
         </block>
     </view>
 
+
+    <view class="allview">
+        <scroll-view scroll-x="true" class="allview">
+            <view class="cell">
+                <image src="https://m.youcai.xin/static/img/gravida.png" />
+                <text>栏目sn</text>
+            </view>
+            <view class="cell">栏目2</view>
+            <view class="cell">栏目3</view>
+            <view class="cell">栏目4</view>
+            <view class="cell">栏目5</view>
+            <view class="cell">栏目6</view>
+            <view class="cell">栏目7</view>
+            <view class="cell">栏目8</view>
+        </scroll-view>
+    </view>
+    
+   
+
+ <scroll-view class="recommend_scroll_x_box" scroll-x="true">
+      <view class="recommend_hot_box" wx:for="{{hotList}}">
+      
+        <image src="{{item.pic}}" class="slide-image"></image>
+        <text>{{item.title}}</text>
+    
+      </view>
+    </scroll-view>
+
     <view class="text">
         <view class="line_y"></view>
         <text>精品课程</text>
