@@ -103,6 +103,14 @@ view.text text {
 
 
 
+
+/* 去掉水平滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: flex;
+}
+
 .item {
   padding: 8px;
   background-color: #fff;

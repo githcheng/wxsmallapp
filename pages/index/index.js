@@ -110,10 +110,10 @@ Page( {
   },
   golist: function(event) {
     wx.navigateTo({
-      url: '../list/list?type=' + event.currentTarget.dataset.type
+      url: '../list/index?type=' + event.currentTarget.dataset.type
     })
   },
-  gos: function(event) {
+  goDetail: function(event) {
     wx.navigateTo({
       url: '../template/index?type=' + event.currentTarget.dataset.type
     })
