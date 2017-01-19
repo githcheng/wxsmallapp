@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <button type="primary"  bindtap="gofeedback">反馈区</button>
+  <button type="primary"  bindtap="gofeedback">匿名留言区</button>
+  <button type="primary"  bindtap="gofeedback">红包区</button>
+  <button type="primary"  bindtap="gofeedback">学习进度</button>
+</view>

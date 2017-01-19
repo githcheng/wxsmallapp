@@ -1,0 +1,14 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="section">
+  <input  placeholder="老师" value="cjam" />
+  <input  placeholder="课程" value="数学" />
+    <input bindinput="bindNameInput" placeholder="请输入名字" value="{{inputNameValue}}" />
+    <input bindinput="bindContentInput" placeholder="请输入要查询的城市名称" value="{{inputContentValue}}" />
+  </view>
+  <view class="btn-area">
+    <button type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="search"> 确定
+    </button>
+  </view>
+</view>
