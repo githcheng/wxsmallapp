@@ -1,7 +1,21 @@
 <!--index.wxml-->
 <view class="container">
-  <button type="primary"  bindtap="gofeedback">反馈区</button>
+<!--
+
+判断用户状态， 非系统内用户提示不可见
+-->
+
+<view wx:if="{{status}}"> 
+
+  <button type="primary"  bindtap="gofeedback">今日课程 news</button>
+  <button type="primary"  bindtap="gofeedback">学习进度(老师不显示)</button>
+  <button type="primary"  bindtap="gofeedback">学生反馈区(学生/家长不显示)</button>
+  <button type="primary"  bindtap="gofeedback">老师反馈区(老师不显示)</button>
   <button type="primary"  bindtap="gofeedback">匿名留言区</button>
   <button type="primary"  bindtap="gofeedback">红包区</button>
-  <button type="primary"  bindtap="gofeedback">学习进度</button>
+
+ </view>
+  
+  
+  
 </view>

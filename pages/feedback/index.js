@@ -45,7 +45,7 @@ Page({
     let that = this;//保留page函数中object的引用
     //联网
     wx.request({
-      url: "https://www.52hts.club/feedback/do",
+      url: app.HOST_URL+"/feedback/do",
       header: {
         "Content-Type": "application/json",
       },
