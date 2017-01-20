@@ -4,41 +4,55 @@ var app = getApp()
 
 
 
-Page( {
+Page({
   data: {
-    userInfo: {avatarUrl:'../../image/avator.jpg',nickName:'qieangel2013'},
-    source: 'https://github.com/qieangel2013/SmallApp',
-    status:0,
+    userInfo: { avatarUrl: '../../image/avator.jpg', nickName: 'qieangel2013' },
+    status: 0,
+    // item
+    items: [
+      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'},
+      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/84439174cad04497beda3a076663beb4.jpg'},
+      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/1987d8eb8b1748368b7f2382332c9718.jpg'},
+      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'},
+      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'},
+      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'},
+      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'},
+      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'}
+    ]
   },
-  
-  
-  onLoad: function() {
+
+
+  onLoad: function () {
     var that = this
     //调用应用实例的方法获取全局数据
-    app.getUserInfo( function( userInfo ) {
+    app.getUserInfo(function (userInfo) {
       //更新数据
-      that.setData( {
+      that.setData({
         userInfo: userInfo
       })
     })
   },
 
-onHide:function(){
-    status:0;
-},
-  onShow: function(){
+
+
+  onHide: function () {
+    status: 0;
+  },
+
+
+  onShow: function () {
     var that = this
     //调用应用实例的方法获取全局数据
-    app.getUserInfo( function( userInfo ) {
+    app.getUserInfo(function (userInfo) {
       //更新数据
-      that.setData( {
+      that.setData({
         userInfo: userInfo
       })
     })
 
     //请求服务端用户数据
     wx.request({
-      url: app.HOST_URL+"/user/getUserInfo",
+      url: app.HOST_URL + "/user/getUserInfo",
       header: {
         "Content-Type": "application/json",
       },
@@ -50,22 +64,22 @@ onHide:function(){
         console.log(res.data);
         if (res.data.code == 0) { //成功
 
-          if(res.data.user.type == 0){
+          if (res.data.user.type == 0) {
             wx.showModal({
-            title: '您是游客',
-            showCancel: false,
-            confirmText: '确定',
-            success: function (res) {
-              status: 0
-            }
-             });
+              title: '您是游客',
+              showCancel: false,
+              confirmText: '确定',
+              success: function (res) {
+                status: 0
+              }
+            });
           } else {
-            that.setData( {
-                  status: 1
+            that.setData({
+              status: 1
             })
           }
-          
-          
+
+
         } else {
 
           wx.showModal({
@@ -94,14 +108,14 @@ onHide:function(){
       },
       //无论成功与失败,loading都取消
       complete: function () {
-        
+
       }
     });
   },
-    //事件处理函数
-  gofeedback: function(event) {
+  //事件处理函数
+  gofeedback: function (event) {
     wx.navigateTo({
-      url: '../feedback/index?title='+event.currentTarget.dataset.title+'&url='+event.currentTarget.dataset.url
+      url: '../feedback/index?title=' + event.currentTarget.dataset.title + '&url=' + event.currentTarget.dataset.url
     })
   },
 
