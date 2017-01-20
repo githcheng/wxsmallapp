@@ -10,14 +10,14 @@ Page({
     status: 0,
     // item
     items: [
-      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'},
-      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/84439174cad04497beda3a076663beb4.jpg'},
-      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/1987d8eb8b1748368b7f2382332c9718.jpg'},
-      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'},
-      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'},
-      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'},
-      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'},
-      {image: 'https://hamlet.b0.upaiyun.com/1609/22111/fe8765fa7f2f48cd87760c10ddd20ae6.jpg'}
+      {image: '../../image/today_couse2.png'},
+      {image: '../../image/course_status.png'},
+      {image: '../../image/feedback_student.png'},
+      {image: '../../image/message.png'},
+      {image: '../../image/today_couse2.png'},
+      {image: '../../image/feedback_student.png'},
+      {image: '../../image/course_status.png'},
+      {image: '../../image/message.png'},
     ]
   },
 

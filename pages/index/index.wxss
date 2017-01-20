@@ -1,4 +1,5 @@
 .container {
+  padding-top: 0px;
   background-color: #F2f2f2;
 }
 
@@ -84,7 +85,7 @@ view.text text {
 }
 
 .cell {
-   background: white; width: 90px; height: 70px; display: inline-block;
+   background: white; width: 185rpx; height: 140rpx; display: inline-block;
    border-right: 2px solid #F2f2f2;
 }
 .cellitem {

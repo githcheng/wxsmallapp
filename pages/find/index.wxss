@@ -1,6 +1,6 @@
 /**index.wxss**/
 .container {
-  padding-top: 3px;
+  padding-top: 1px;
   background-color: #F2f2f2;
 }
 
