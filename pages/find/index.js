@@ -10,14 +10,14 @@ Page({
     status: 0,
     // item
     items: [
-      {image: '../../image/today_couse2.png'},
-      {image: '../../image/course_status.png'},
-      {image: '../../image/feedback_student.png'},
-      {image: '../../image/message.png'},
-      {image: '../../image/today_couse2.png'},
-      {image: '../../image/feedback_student.png'},
-      {image: '../../image/course_status.png'},
-      {image: '../../image/message.png'},
+      {image: '../../image/today_couse2.png',catchtap:"goQueryTodayCourse"},
+      {image: '../../image/course_status.png',catchtap:"gofeedback"},
+      {image: '../../image/feedback_student.png',catchtap:"gofeedback"},
+      {image: '../../image/message.png',catchtap:"gofeedback"},
+      {image: '../../image/today_couse2.png',catchtap:"gofeedback"},
+      {image: '../../image/feedback_student.png',catchtap:"gofeedback"},
+      {image: '../../image/course_status.png',catchtap:"gofeedback"},
+      {image: '../../image/message.png',catchtap:"gofeedback"},
     ]
   },
 
@@ -112,10 +112,18 @@ Page({
       }
     });
   },
+
+
   //事件处理函数
   gofeedback: function (event) {
     wx.navigateTo({
       url: '../feedback/index?title=' + event.currentTarget.dataset.title + '&url=' + event.currentTarget.dataset.url
+    })
+  },
+  //事件处理函数
+  goQueryTodayCourse: function (event) {
+    wx.navigateTo({
+      url: '../todaycourse/index?title=' + event.currentTarget.dataset.title + '&url=' + event.currentTarget.dataset.url
     })
   },
 

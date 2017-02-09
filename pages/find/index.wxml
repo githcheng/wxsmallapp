@@ -7,11 +7,11 @@
 -->
   <view wx:if="{{status}}">
     <block wx:for-items="{{items}}">
-      <view class="finditem" catchtap="gofeedback">
+      <view class="finditem" catchtap="{{item.catchtap}}">
         <image src="{{item.image}}" class="slide-image" />
       </view>
     </block>
-    <button type="primary" bindtap="gofeedback">今日课程 news</button>
+    <button type="primary" bindtap="goQueryTodayCourse">今日课程 news</button>
     <button type="primary" bindtap="gofeedback">学习进度(老师不显示)</button>
     <button type="primary" bindtap="gofeedback">学生反馈区(学生/家长不显示)</button>
     <button type="primary" bindtap="gofeedback">老师反馈区(老师不显示)</button>

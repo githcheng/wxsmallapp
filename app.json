@@ -6,6 +6,7 @@
     "pages/find/index",
     "pages/me/index",
     "pages/feedback/index",
+    "pages/todaycourse/index",
     "pages/logs/logs"
   ],
   "window":{

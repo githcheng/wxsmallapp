@@ -1,6 +1,12 @@
+
+
+//index.js
+//获取应用实例
+var app = getApp()
+
+
 Page({
-  
-  
+    
   data: {  //状态机数据
     inputContentValue: "", //输入的内容
     inputNameValue: "", //输入的名字
@@ -50,7 +56,7 @@ Page({
         "Content-Type": "application/json",
       },
       data: {
-        "name": this.data.inputNameValue,
+        "openId": this.data.inputNameValue,
         "content": this.data.inputContentValue
       },
       //res = {data: '开发者服务器返回的内容'}
