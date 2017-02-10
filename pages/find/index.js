@@ -11,8 +11,8 @@ Page({
     // item
     items: [
       {image: '../../image/today_couse2.png',catchtap:"goQueryTodayCourse"},
-      {image: '../../image/course_status.png',catchtap:"gofeedback"},
-      {image: '../../image/feedback_student.png',catchtap:"gofeedback"},
+      {image: '../../image/course_status.png',catchtap:"goCourseProgress"},
+      {image: '../../image/feedback_student.png',catchtap:"goStudentFeedbackCourseList"},
       {image: '../../image/message.png',catchtap:"gofeedback"},
       {image: '../../image/today_couse2.png',catchtap:"gofeedback"},
       {image: '../../image/feedback_student.png',catchtap:"gofeedback"},
@@ -124,6 +124,18 @@ Page({
   goQueryTodayCourse: function (event) {
     wx.navigateTo({
       url: '../todaycourse/index?title=' + event.currentTarget.dataset.title + '&url=' + event.currentTarget.dataset.url
+    })
+  },
+
+  //事件处理函数
+  goStudentFeedbackCourseList: function (event) {
+    wx.navigateTo({
+      url: '../studentFeedback/index?title=' + event.currentTarget.dataset.title + '&url=' + event.currentTarget.dataset.url
+    })
+  },
+  goCourseProgress: function (event) {
+    wx.navigateTo({
+      url: '../courseProgress/index?title=' + event.currentTarget.dataset.title + '&url=' + event.currentTarget.dataset.url
     })
   },
 

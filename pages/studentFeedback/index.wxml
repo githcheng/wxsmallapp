@@ -1,0 +1,20 @@
+
+<!--index.wxml-->
+<!--最近几天的排期，最多10条，今日以前的不显示-->
+<view class="container">
+  <block wx:for-items="{{courselist}}">
+    <view class="" data-name="{{item.name}}" data-teachername="{{item.teacherName}}" data-begintime="{{item.beginTime}}" data-endtime="{{item.endTime}}" data-courselogid="{{item.id}}"  catchtap="doFeedback">
+      
+      <view class="">
+        <text>{{item.name}}</text>
+        <text class="">{{item.teacherName}}</text>
+      </view>
+
+      <view class="">
+        <text>{{item.beginTime}}</text>
+        <text>{{item.endTime}}</text>
+      </view>
+
+    </view>
+  </block>
+</view>

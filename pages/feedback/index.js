@@ -8,23 +8,19 @@ var app = getApp()
 Page({
     
   data: {  //状态机数据
+
+
     inputContentValue: "", //输入的内容
-    inputNameValue: "", //输入的名字
+
+    courselogid: "", //输入的名字
+    name: "", //输入的名字
+    teachername: "", //输入的名字
+    begintime: "", //输入的名字
+    endtime: "", //输入的名字
+    score:"",
+
     loading: false, //加载状态
     disabled: true, //按钮是否可用
-  },
-
-
-  //输入框绑定的事件
-  bindNameInput: function (e) {
-    let value = e.detail.value;
-    //输入框,当输入的值大于0的时候按钮可用
-    this.setData({
-      inputNameValue: value,
-    });
-    this.setData({
-      disabled: this.data.inputContentValue.length <= 0 || this.data.inputNameValue.length <= 0
-    });
   },
 
 
@@ -36,13 +32,27 @@ Page({
       inputContentValue: value,
     });
     this.setData({
-      disabled: this.data.inputContentValue.length <= 0 || this.data.inputNameValue.length <= 0
+      disabled: this.data.inputContentValue.length <= 0
     });
 
   },
 
 
-  search: function (e) {
+onLoad: function (options) {
+    console.log(options);
+    this.setData({
+      courselogid: options.courselogid, //输入的名字
+      name: options.name, //输入的名字
+      teachername: options.teachername, //输入的名字
+      begintime: options.begintime, //输入的名字
+      endtime: options.endtime, //输入的名字
+      score: 70,
+    });
+   
+  },
+
+
+  dofeedback: function (e) {
     //查询按钮
     this.setData({
       loading: true,
@@ -56,7 +66,8 @@ Page({
         "Content-Type": "application/json",
       },
       data: {
-        "openId": this.data.inputNameValue,
+        "courselogid": this.data.courselogid,
+        "score": this.data.score,
         "content": this.data.inputContentValue
       },
       //res = {data: '开发者服务器返回的内容'}

@@ -1,0 +1,13 @@
+/**index.wxss**/
+.container {
+  background-color: #F2f2f2;
+}
+/**button范围*/
+.btn-area{
+    padding: 0 30rpx;
+}
+/**button*/
+.btn-area button{
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}

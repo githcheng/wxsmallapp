@@ -1,0 +1,20 @@
+<!--pages/courseProgress/index.wxml-->
+<view class="container">
+<text>pages/courseProgress/index.wxml</text>
+  <block wx:for-items="{{courseProgressList}}">
+    <view class="" catchtap="">
+      
+      <view class="">
+        <text>{{item.used}}</text>
+        <text class="">{{item.total}}</text>
+      </view>
+
+      <view class="">
+        <text>{{item.courseName}}</text>
+        <text>{{item.descMsg}}</text>
+      </view>
+
+    </view>
+  </block>
+</view>
+

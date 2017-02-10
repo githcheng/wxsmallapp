@@ -7,6 +7,8 @@
     "pages/me/index",
     "pages/feedback/index",
     "pages/todaycourse/index",
+    "pages/studentFeedback/index",
+    "pages/courseProgress/index",
     "pages/logs/logs"
   ],
   "window":{
