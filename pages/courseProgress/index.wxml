@@ -1,20 +1,29 @@
 <!--pages/courseProgress/index.wxml-->
-<view class="container">
-<text>pages/courseProgress/index.wxml</text>
-  <block wx:for-items="{{courseProgressList}}">
-    <view class="" catchtap="">
-      
-      <view class="">
-        <text>{{item.used}}</text>
-        <text class="">{{item.total}}</text>
-      </view>
 
-      <view class="">
+<view class="item_top"> 
+    <text>课程学习情况</text>
+</view>
+
+<view class="container">
+
+  <block wx:for-items="{{courseProgressList}}">
+    <view class="line"></view>
+    <view class="item_area">
+
+      <view class="item_area_text">
         <text>{{item.courseName}}</text>
+        <text>剩余：{{item.total - item.used}}课时</text>
+        <text>已用：{{item.used}}课时</text>
+      </view>
+      
+      <progress  percent="{{(item.used / item.total) * 100}}"  show-info="false" stroke-width="12" color="red" active="true"/>
+      
+      <view class="item_area_descmsg">
         <text>{{item.descMsg}}</text>
       </view>
 
     </view>
+    
   </block>
 </view>
 

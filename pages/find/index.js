@@ -10,14 +10,13 @@ Page({
     status: 0,
     // item
     items: [
+
+      // {image: '../../image/message.png',catchtap:"goSubmitCourseLog"},
       {image: '../../image/today_couse2.png',catchtap:"goQueryTodayCourse"},
       {image: '../../image/course_status.png',catchtap:"goCourseProgress"},
       {image: '../../image/feedback_student.png',catchtap:"goStudentFeedbackCourseList"},
       {image: '../../image/message.png',catchtap:"gofeedback"},
-      {image: '../../image/today_couse2.png',catchtap:"gofeedback"},
-      {image: '../../image/feedback_student.png',catchtap:"gofeedback"},
-      {image: '../../image/course_status.png',catchtap:"gofeedback"},
-      {image: '../../image/message.png',catchtap:"gofeedback"},
+      
     ]
   },
 
@@ -136,6 +135,11 @@ Page({
   goCourseProgress: function (event) {
     wx.navigateTo({
       url: '../courseProgress/index?title=' + event.currentTarget.dataset.title + '&url=' + event.currentTarget.dataset.url
+    })
+  },
+  goSubmitCourseLog: function (event) {
+    wx.navigateTo({
+      url: '../submitCourseLog/index?title=' + event.currentTarget.dataset.title + '&url=' + event.currentTarget.dataset.url
     })
   },
 

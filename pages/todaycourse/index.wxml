@@ -3,18 +3,28 @@
 <!--最近几天的排期，最多10条，今日以前的不显示-->
 <view class="container">
   <block wx:for-items="{{courselist}}">
-    <view class="" catchtap="goDetail">
+    <view class="item_view">
       
-      <view class="">
+      <view class="item_c_t_text">
         <text>{{item.name}}</text>
-        <text class="">{{item.teacherName}}</text>
+        <text>{{item.teacherName}}</text>
       </view>
 
-      <view class="">
-        <text>{{item.beginTime}}</text>
-        <text>{{item.endTime}}</text>
+      <view class="item_date">
+          <image src="/image/begin.png"></image>
+          <text class="item_datelable_text">开始时间</text>
+          <text class="item_date_text">{{item.beginTime}}</text>
       </view>
+
+      <view class="item_date">
+          <image src="/image/end.png"></image>
+           <text class="item_datelable_text">结束时间</text>
+          <text class="item_date_text">{{item.endTime}}</text>
+      </view>
+      
 
     </view>
+    <view class="line"></view>
+
   </block>
 </view>

@@ -9,6 +9,7 @@
     "pages/todaycourse/index",
     "pages/studentFeedback/index",
     "pages/courseProgress/index",
+    "pages/submitCourseLog/index",
     "pages/logs/logs"
   ],
   "window":{
@@ -35,10 +36,10 @@
       "selectedIconPath": "image/icon_API_HL.png",
       "text": "发现"
     }, {
-      "pagePath": "pages/component/index",
+      "pagePath": "pages/submitCourseLog/index",
       "iconPath": "image/icon_API.png",
       "selectedIconPath": "image/icon_API_HL.png",
-      "text": "工具箱"
+      "text": "排课"
     }, {
       "pagePath": "pages/me/index",
       "iconPath": "image/icon_API.png",

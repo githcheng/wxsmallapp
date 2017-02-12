@@ -14,10 +14,11 @@ Page({
 
     courselogid: "", //输入的名字
     name: "", //输入的名字
-    teachername: "", //输入的名字
+    username: "", //输入的名字
     begintime: "", //输入的名字
     endtime: "", //输入的名字
     score:"",
+    isCommon : "",
 
     loading: false, //加载状态
     disabled: true, //按钮是否可用
@@ -43,12 +44,17 @@ onLoad: function (options) {
     this.setData({
       courselogid: options.courselogid, //输入的名字
       name: options.name, //输入的名字
-      teachername: options.teachername, //输入的名字
+      username: options.username, //输入的名字
       begintime: options.begintime, //输入的名字
       endtime: options.endtime, //输入的名字
       score: 70,
     });
-   
+
+    if(options.courselogid == null){
+      this.setData({
+        isCommon:1
+      });
+    }
   },
 
 
@@ -68,7 +74,9 @@ onLoad: function (options) {
       data: {
         "courselogid": this.data.courselogid,
         "score": this.data.score,
-        "content": this.data.inputContentValue
+        "content": this.data.inputContentValue,
+        "openid" : 'chengguojiang',
+        "isCommon" : this.data.isCommon
       },
       //res = {data: '开发者服务器返回的内容'}
       success: function (res) {

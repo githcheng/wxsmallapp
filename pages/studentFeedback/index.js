@@ -79,7 +79,7 @@ Page({
   doFeedback: function(event) {
      console.log(this.data)
       wx.navigateTo({
-      url: '../feedback/index?name=' + event.currentTarget.dataset.name+'&teachername='+event.currentTarget.dataset.teachername+'&begintime='+event.currentTarget.dataset.begintime+'&endtime='+event.currentTarget.dataset.endtime+'&courselogid='+event.currentTarget.dataset.courselogid
+      url: '../feedback/index?name=' + event.currentTarget.dataset.name+'&username='+event.currentTarget.dataset.username+'&begintime='+event.currentTarget.dataset.begintime+'&endtime='+event.currentTarget.dataset.endtime+'&courselogid='+event.currentTarget.dataset.courselogid
     })
   }
 

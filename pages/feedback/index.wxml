@@ -1,16 +1,45 @@
 
 <!--index.wxml-->
-<view class="container">
-  <view class="section">
 
-    <text>{{name}}</text>
-    <text>{{teachername}}</text>
-    <text>{{begintime}}</text>
-    <text>{{endtime}}</text>
-    <input bindinput="bindContentInput" placeholder="请输入反馈的内容" value="{{inputContentValue}}" />
+<view class="item_top" wx:if="{{isCommon}}">
+    <text>问题和意见</text>
   </view>
+
+<view class="container">
+  
+  
+  
+
+  <view class="item_view" wx:if="{{!isCommon}}">
+
+    <view class="item_c_t_text">
+        <text>{{name}}</text>
+        <text>{{username}}</text>
+      </view>
+
+      <view class="item_date">
+          <image src="/image/begin.png"></image>
+          <text class="item_date_lable_text">开始时间</text>
+          <text class="item_date_text">{{begintime}}</text>
+      </view>
+
+      <view class="item_date">
+          <image src="/image/end.png"></image>
+           <text class="item_date_lable_text">结束时间</text>
+          <text class="item_date_text">{{endtime}}</text>
+      </view>
+    
+  </view>
+
+
+  <textarea class="item_input_text" maxlength="256"  bindinput="bindContentInput" placeholder="请输入反馈的内容" value="{{inputContentValue}}" />
+
+
   <view class="btn-area">
     <button type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="dofeedback"> 确定
     </button>
   </view>
+
+
+
 </view>
